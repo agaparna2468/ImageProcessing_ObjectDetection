@@ -13,3 +13,6 @@ pores = total_no - np.count_nonzero(img_thresh == 255)      # Number of pixels c
 # print(total_no)
 # print(pores)
 print(f'Porosity calculated using binary thresholding with intensities below 60 are given 0: {math.ceil((pores/total_no)*10000)/100}')
+cv2.imshow('Image1', img_thresh)
+cv2.waitKey(0)
+cv2.imwrite('SimpleThresholding.png', img_thresh)
