@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import math
 
 img = cv2.imread('Sample Image.jpg', cv2.IMREAD_GRAYSCALE)
 
@@ -11,7 +12,7 @@ pores = total_no - np.count_nonzero(img_thresh == 255)
 #print(np.count_nonzero(img_thresh == 255))
 #print(total_no)
 #print(pores)
-print(f'Porosity calculated using binary thresholding with intensities below 60 are given 0: {pores/total_no}')
+print(f'Porosity calculated using binary thresholding with intensities below 60 are given 0: {math.ceil((pores/total_no)*10000)/100}')
 
 img_thresh = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 7)
 
@@ -21,4 +22,4 @@ pores = total_no - np.count_nonzero(img_thresh == 255)
 #print(np.count_nonzero(img_thresh == 255))
 #print(total_no)
 #print(pores)
-print(f'Porosity calculated using binary thresholding with gaussian thresholding around a neighbourhood of 11 and constant as 7: {pores/total_no}')
+print(f'Porosity calculated using binary thresholding with gaussian thresholding around a neighbourhood of 11 and constant as 7: {math.ceil((pores/total_no)*10000)/100}')
