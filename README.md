@@ -1,4 +1,5 @@
-# SOC-2023
+# Image Processing and Object Detection
+# Season Of Code-2023
 
 ## Week 1
 Tutorial on Python
