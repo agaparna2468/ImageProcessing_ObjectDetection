@@ -15,3 +15,4 @@ Creating a model which counts number of objects in a frame and area covered by t
 
 ## Week 5-6
 Model Assignment
+Report - [SOC_Report.pdf](https://github.com/agaparna2468/ImageProcessing_ObjectDetection/files/12083923/SOC_Report.pdf)
